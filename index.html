@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/javascript1.js"></script>
+		<meta charset="UTF-8">
+		<title>Cory Grundy</title>
+		<link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+	</head>
+	<!-- Go to page 343 -->
+<body class="Background">
+	<script>
+		
+	</script>
+
+<!-- Navbar Section -->
+	<div class="Navbar">
+		<a class="active" href="#Home">Home</a> 
+		<a href="#About">About</a>
+		<a href="#GitHub">GitHub</a>
+		<a href="#myForm">Contact</a>
+	</div>
+<!-- End Navbar Section -->
+
+		<br>
+
+<!-- Home Section -->
+	<div id="Home">
+		<video autoplay muted loop id="Typing_Video">
+			<source src="./video/coding.mp4" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+	</div>
+ 
+	<div class="Video_Text"> 
+		<h1 style="color:rgb(69, 69, 251);">Cory Grundy's Portfolio</h1>
+			<p> 
+				<strong>
+					<center>
+						<q>Learning and Innovation go hand in hand.
+						<br>The arrogance of success is to think that what you did yesterday
+						<br>will be sufficient for tomorrow.
+						</q>	
+						<br><h4>-William Pollard</h4><br>
+						<br>
+						<p><center>My name is Cory Grundy. Welcome to my portfolio website. On it, I will tell you about my background and experience.</p></center><br>
+						<br> 
+					</center>	
+				</strong>
+			</p> 
+	</div>
+<!-- End Home Section -->
+
+<!-- Slideshow Section -->
+<div id="Slideshow" style="text-align:left;">
+    <div id="Slideshow_Background"> 
+      <div id="Slideshow_Container">
+        
+		<div class="mySlides fade">
+          	<div class="Slide_Number">1 / 4</div>
+            	<img class="Slide_Show_Images" src="./img/jQuerylogo.png" style="width:100%">
+              		<div class="text">I'm available to assist you on your project using jQuery!</div>
+        </div>
+        
+		<div class="mySlides fade">
+          	<div class="Slide_Number">2 / 4</div>
+            	<img class="Slide_Show_Images" src="./img/HTML_CSS_and_JavaScript.jpeg" style="width:100%">
+					  <div class="text">I am on my way to become a full-stack <br>
+						software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+        </div>
+
+        <div class="mySlides fade">
+          	<div class="Slide_Number">3 / 4</div>
+            	<img class="Slide_Show_Images" src="./img/Python.png" style="width:100%">
+              			<div class="text">I am taking up the popular programming language Python,</div>
+        </div>
+		<div class="mySlides fade">
+		  	<div class="Slide_Number">4 / 4</div>
+				<img class="Slide_Show_Images" src="./img/mail.png" style="width:100%">
+			  		<div class="text">
+						<a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+			  		</div>
+	    </div>
+	
+		  	<a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+		  	<a class="Next" onclick="plusSlides(1)">&#10095;</a>
+		
+		</div>
+		<br>
+	  
+		<div style="text-align:center">
+		
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+		
+		</div>
+	</div>
+</div>
+
+<script>
+    var slideIndex = 1;
+	  	showSlides(slideIndex);
+	function plusSlides(n) {
+	  	showSlides(slideIndex += n);
+	}
+	function currentSlide(n) {
+	  	showSlides(slideIndex = n);
+	}
+	function showSlides(n) {
+	  	var i;
+	  	var slides = document.getElementsByClassName("mySlides");
+	  	var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) {slideIndex = 1}    
+			if (n < 1) {slideIndex = slides.length}
+		  		for (i = 0; i < slides.length; i++) {
+		  		slides[i].style.display = "none";  
+		  	}
+		  		for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+		  	}
+	  	slides[slideIndex-1].style.display = "block";  
+	  	dots[slideIndex-1].className += " active";
+	}
+</script>
+<!-- End Slideshow Section -->
+
+<!-- About Section -->
+	<div class="Row" id="About"> 
+		<div class="Column_2">
+			<img src="./img/Studydesk.jpg" alt="A nice desk to study at.">
+		</div>
+  
+		<div class="Column_1">
+			<h2>About</h2>
+				<p>I am a junior software developer who loves to code! I work well with and will often communicate with others and I can be very resposive to the right people. <br><br>As a student of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s C# and .NET Framework boot camp. I am skilled with HTML 5, JavaScript, Jquery, C# and the Python coding languages, with practice in using multiple IDEs. <br><br> <a href="#Contact">Contact</a> me below!</p>
+		</div>
+	</div>
+<!-- End About Section -->
+
+<!-- GitHub Section -->
+	<div class="Row" id="GitHub">
+		<div class="Column_1">
+			<h2>GitHub</h2>
+				<p>You can view my coding projects on my GitHub profile here:<br>
+				<center><a href="https://github.com/corygrundy" target="_blank">Cory Grundy's GitHub</a></center></p>
+				<p>This is where I have most of my experiance with coding projects stored.</p>
+		</div>
+		
+		<div class="Column_2">
+			<a href="https://github.com/corygrundy" target="_blank"><img src="./img/github.png" alt="GitHub"></a>
+		</div>
+	</div>
+<!-- End GitHub Section-->
+
+<!-- LinkedIn Section -->
+	<div class="Row" id="LinkedIn">
+		<div class="Column_1">
+			<h2>LinkedIn</h2>
+			<p>
+				You can view my LinkedIn profile here:<br>
+				<center><a href="https://www.linkedin.com/in/cory-grundy/" target="_blank">Cory Grundy's LinkedIn</a></center>
+			</p>
+		</div>
+
+		<div class="Column_2">
+			<a href="https://www.linkedin.com/in/cory-grundy/" target="_blank"><img src="./img/LinkedIn.jpeg" alt="LinkedIn"></a>
+		</div>
+	</div>
+<!-- End LinkedIn Section -->
+
+<!-- Contact section -->
+	<button class="open-button" onclick="openForm()">Contact Me</button>
+
+	<div class="form-popup" id="myForm">
+		<form action="./thanks.html" class="form-container">
+	  		<h2>Contact</h2>
+  
+	  		<label for="email"><b>Email</b></label>
+	  		<input type="text" placeholder="Enter Email" name="email" required>
+  
+	  		<label for="pnum"><b>Phone Number</b></label>
+			<input type="text" placeholder="Enter Phone Number" name="psw" required>
+			
+			<label for="msg"><b>Message</b></label>
+			<input type="text" placeholder="Pass me a note" name="msg" required>
+  
+	  		<button type="submit" class="btn">Send Message</button>
+	  		<button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+		</form>
+	</div>
+<!-- End Contact Section -->
+
+<!-- Footer Section -->
+	<footer>
+		<p><center>
+		    Cory Grundy &ensp;|&ensp; 2026</center><br>
+		</p>
+	</footer>
+<!-- End Footer Section -->
+</body>
+
+</html>
